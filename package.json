@@ -1,0 +1,49 @@
+{
+  "name": "electron-quick-start-typescript",
+  "version": "1.0.0",
+  "description": "A minimal Electron application written with Typescript",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint -c .eslintrc --ext .ts ./src",
+    "start": "ENV=dev npm run build && ENV=dev electron ./main/index.js",
+    "start-prod": "npm run build && electron ./main/index.js",
+    "pack": "electron-builder --dir -mwl",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder"
+  },
+  "repository": "https://github.com/electron/electron-quick-start-typescript",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo",
+    "typescript"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "@types/compression": "^1.7.0",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cors": "^2.8.9",
+    "@types/express": "^4.17.9",
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
+    "electron": "^9.3.1",
+    "electron-builder": "^22.9.1",
+    "electron-webpack": "^2.8.2",
+    "eslint": "^7.3.1",
+    "typescript": "^3.9.5",
+    "webpack": "^5.11.0"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "path": "^0.12.7",
+    "source-map-support": "^0.5.19"
+  }
+}
